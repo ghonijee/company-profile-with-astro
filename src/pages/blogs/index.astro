@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardBlogItem from "../../components/CardBlogItem.astro";
+import Icon from "astro-icon";
+---
+
+<Layout title="Loqomind Technology">
+	<div class="container flex flex-col gap-y-40 mx-auto px-20 pt-44">
+		<div class="flex flex-col gap-y-12">
+			<div class="flex flex-col gap-y-2 items-center">
+				<h1 class="text-orange-500 font-bold text-4xl">Insight.</h1>
+				<p class="text-gray-800">
+					Fresh, compelling content crafted by our experienced team of
+					professionals.
+				</p>
+                <hr>
+			</div>
+            
+			<div class="flex flex-col gap-y-16">
+				<CardBlogItem />
+				<CardBlogItem />
+				<CardBlogItem />
+				<CardBlogItem />
+				<CardBlogItem />
+				<CardBlogItem />
+			</div>
+			<div class="self-end">
+				<a href="#" class="flex flex-row text-orange-500 font-semibold items-start">
+					Older blogs <Icon
+						name="mi:arrow-right"
+						class="h-6 px-2"
+					/>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</Layout>

@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ButtonFillPrimay from "../components/ButtonFillPrimay.astro";
+import CardBlogItem from "../components/CardBlogItem.astro";
+import Icon from "astro-icon";
 ---
 
 <Layout title="Loqomind Technology">
@@ -50,22 +52,22 @@ import ButtonFillPrimay from "../components/ButtonFillPrimay.astro";
 				<img src="/image_hero_2.png" class="w-4/5" />
 			</div>
 			<div class="w-2/3 flex flex-col items-end gap-y-8">
-				<div class="border-2 p-8 w-2/3">
+				<div class=" border-solid border-2 border-orange-600 rounded-md p-8 w-2/3">
 					<h1 class="text-2xl text-orange-500 font-bold mb-6">
 						From Idea to Product
 					</h1>
 					<p>
 						Whether you're a visionary founder, a product owner in a
-						thriving enterprise, or anywhere in between, thoughtbot
-						is your trusted partner in solving significant
-						challenges through a design-led approach. Our expertise
-						empowers us to address your unique needs, uncover
-						valuable insights, and deliver innovative solutions that
-						make a meaningful impact. Let us guide you on your
-						journey towards success.
+						thriving enterprise, or anywhere in between, loqomind is
+						your trusted partner in solving significant challenges
+						through a design-led approach. Our expertise empowers us
+						to address your unique needs, uncover valuable insights,
+						and deliver innovative solutions that make a meaningful
+						impact. Let us guide you on your journey towards
+						success.
 					</p>
 				</div>
-				<div class="border-2 p-8 w-2/3">
+				<div class="border-solid border-2 border-orange-600 rounded-md p-8 w-2/3">
 					<h1 class="text-2xl text-orange-500 font-bold mb-6">
 						Support Your Team
 					</h1>
@@ -82,12 +84,29 @@ import ButtonFillPrimay from "../components/ButtonFillPrimay.astro";
 				</div>
 			</div>
 		</div>
-		<div class="">
-			<h1 class="text-orange-500 font-bold text-4xl mb-2">Insight.</h1>
-			<p class="text-gray-800">
-				Fresh, compelling content crafted by our experienced team of
-				professionals.
-			</p>
+		<div class="flex flex-col gap-y-12">
+			<div class="flex flex-col gap-y-2 divider divider-y">
+				<h1 class="text-orange-500 font-bold text-4xl">Insight.</h1>
+				<p class="text-gray-800">
+					Fresh, compelling content crafted by our experienced team of
+					professionals.
+				</p>
+			</div>
+
+			<div class="flex flex-col gap-y-16 divider-y divider-orange-500">
+				<CardBlogItem />
+				<CardBlogItem />
+				<CardBlogItem />
+			</div>
+			<div class="self-end">
+				<a href="#" class="flex flex-row text-orange-500 font-semibold items-start">
+					Check all our blogs <Icon
+						name="mi:arrow-right"
+						class="h-6 px-2"
+					/>
+				</a>
+			</div>
 		</div>
+
 	</div>
 </Layout>
