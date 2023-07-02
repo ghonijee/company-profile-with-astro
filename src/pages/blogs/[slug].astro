@@ -1,0 +1,162 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SingleBlog from "../../layouts/SingleBlog.astro";
+import CardBlogItem from "../../components/CardBlogItem.astro";
+import Icon from "astro-icon";
+
+export function getStaticPaths() {
+    return [{ params: { slug: "hello-world" } }];
+}
+
+const { slug = "asyo" } = Astro.params;
+---
+
+<Layout title={slug}>
+    <div
+        class="container mx-auto flex flex-col gap-y-12 self-center items-center pt-32 leading-relaxed"
+    >
+        <!-- Header Content  -->
+        <div class="flex flex-col gap-y-4 w-10/12 lg:w-7/12">
+            <!-- title -->
+            <h1 class="text-2xl font-bold">
+                The Powerful Web Framework, AstroJS: Generate Sites with Content
+                from Everywhere!
+            </h1>
+            <p class="text-sm text-grey-200 mb-5">Ahmad Yunus, 12 Juli 2023</p>
+            <!-- Hero Image -->
+            <div>
+                <img src="/image_hero_1.png" class="w-full" />
+                <span class="text-sm italic text-center">Image caption</caption>
+            </div>
+            <hr>
+        </div>
+        <!-- Content -->
+        <div class="tracking-wide w-10/12 lg:w-6/12">
+            {slug}
+            In today's digital age, having a dynamic and engaging website is essential
+            for businesses and individuals alike. With the vast amount of content
+            available online, it's crucial to have a web framework that enables you
+            to seamlessly integrate and generate content from various sources. That's
+            where AstroJS comes in.
+            <br />
+            <br />
+            ## Introducing AstroJS
+            <br />
+            <br />
+
+            AstroJS is a powerful web framework that revolutionizes the way
+            websites are built. It allows developers to generate sites with
+            content from everywhere, making it easier than ever to create
+            dynamic and interactive web pages. Whether you need to pull content
+            from APIs, Markdown files, or even remote websites, AstroJS has got
+            you covered.
+            <br />
+            <br />
+
+            ## The Benefits of AstroJS
+            <br />
+            <br />
+
+            ### 1. Simplified Content Integration
+            <br />
+            <br />
+
+            One of the standout features of AstroJS is its ability to seamlessly
+            integrate content from various sources. Gone are the days of
+            manually copying and pasting content into your website. With
+            AstroJS, you can effortlessly pull content from APIs or external
+            sources, ensuring that your site is always up to date and dynamic.
+            <br />
+            <br />
+
+            ### 2. Enhanced Performance
+            <br />
+            <br />
+
+            AstroJS takes performance seriously. It employs a build-time
+            rendering approach, which means that your site is pre-rendered and
+            optimized before being deployed. This approach eliminates the need
+            for client-side rendering, resulting in faster load times and
+            improved overall performance. Your visitors will appreciate the
+            snappy and responsive experience AstroJS provides.
+            <br />
+            <br />
+
+            ### 3. Flexibility and Customization
+            <br />
+            <br />
+
+            AstroJS offers a wide range of customization options to suit your
+            specific needs. It supports various rendering engines, including
+            React, Vue.js, and Svelte, allowing you to choose the framework that
+            works best for your project. Additionally, AstroJS provides a
+            flexible architecture that enables you to build custom components
+            and extend functionality effortlessly.
+            <br />
+            <br />
+
+            ### 4. SEO-Friendly Approach
+            <br />
+            <br />
+
+            Search engine optimization (SEO) is a crucial aspect of any
+            website's success. AstroJS recognizes this and provides built-in SEO
+            capabilities. By generating static HTML pages at build time, AstroJS
+            ensures that search engines can easily crawl and index your content.
+            This improves your site's visibility and helps drive organic traffic
+            to your web pages.
+            <br />
+            <br />
+
+            ### 5. Seamless Collaboration
+            <br />
+            <br />
+
+            AstroJS promotes seamless collaboration between developers,
+            designers, and content creators. Its component-based approach allows
+            for modular development, enabling different team members to work on
+            specific sections of the website without stepping on each other's
+            toes. This streamlines the development process and fosters efficient
+            teamwork.
+            <br />
+            <br />
+
+            ## Conclusion
+            <br />
+            <br />
+
+            AstroJS is a game-changing web framework that empowers developers to
+            generate sites with content from everywhere. Its ability to
+            seamlessly integrate content from APIs, Markdown files, and remote
+            websites sets it apart from traditional approaches. With AstroJS,
+            you can create highly performant, customizable, and SEO-friendly
+            websites while enjoying a collaborative development process. Embrace
+            the power of AstroJS and take your web development projects to new
+            heights!
+            <br />
+            <br />
+
+            So, what are you waiting for? Give AstroJS a try and unlock the full
+            potential of your website-building endeavors!
+            <br />
+            <br />
+
+            *[APIs]: Application Programming Interfaces *[SEO]: Search Engine
+            Optimization
+        </div>
+        <!-- Share -->
+
+        <!-- Another Blogs -->
+        <div class="flex flex-col gap-y-6 w-10/12 lg:w-7/12">
+            <hr>
+            <div class="flex flex-col gap-y-2 divider divider-y">
+                <h1 class="text-orange-500 font-bold text-2xl">More content</h1>
+            </div>
+
+            <div class="flex flex-col gap-y-12">
+                <CardBlogItem />
+                <CardBlogItem />
+            </div>
+        </div>
+    </div>
+</Layout>
